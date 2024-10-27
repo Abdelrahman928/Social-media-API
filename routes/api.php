@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\api\v1\auth\BlockController;
 use App\Http\Controllers\api\v1\auth\HomePageController;
+use App\Http\Controllers\api\v1\auth\NotificationController;
 use App\Http\Controllers\api\v1\auth\SearchController;
 use App\Http\Controllers\api\v1\auth\SettingController;
 use App\Http\Controllers\api\v1\auth\UserProfileController;
@@ -85,6 +86,11 @@ Route::prefix('v1')->group(function(){
             Route::get('/search/posts', 'postSearch');
             Route::get('/search/posts/most-recent', 'mostRecentFilter');
             Route::get('/search/users', 'peopleSearch');
+        });
+
+        Route::prefix('notifications')->controller(NotificationController::class)->group(function(){
+            Route::get('/notifications', 'index');
+            Route::delete('/notifications', 'destroy');
         });
     });
 });
