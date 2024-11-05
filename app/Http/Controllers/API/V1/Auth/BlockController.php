@@ -5,7 +5,6 @@ namespace App\Http\Controllers\api\v1\auth;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\api\v1\UserResource;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class BlockController extends Controller
