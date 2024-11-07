@@ -32,7 +32,7 @@ class CommentController extends Controller
         if($mentionedUsers->isEmpty()){
             return response()->json([
                 'status' => 404,
-                'message' => 'no such user name found.'
+                'message' => 'username not found found.'
             ], 404);
         }
 
